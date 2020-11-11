@@ -8,6 +8,7 @@ import Adicionales.Aderezo;
 import Postres.*;
 import Procesos.*;
 import Leche.*;
+
 /**
  *
  * @author djurado
@@ -27,7 +28,7 @@ public class Sistema {
         helado_vainilla.añadirAderezo(Aderezo.FRUTILLA);//eliminar y agregar aderezos
         System.out.println(helado_vainilla);
 //        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        System.out.println(ManejadorDePrecio.showPrecioFinal(helado_vainilla));
         
         // Producir Pastel
         Pastel pastel_chocolate = new Pastel("Chocolate");
@@ -35,7 +36,8 @@ public class Sistema {
         pastel_chocolate.añadirAderezo(Aderezo.FRUTILLA);
         System.out.println(pastel_chocolate);
 //        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        System.out.println(ManejadorDePrecio.showPrecioFinal(pastel_chocolate));
+        
         
         
     }
