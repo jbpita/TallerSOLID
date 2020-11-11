@@ -55,4 +55,9 @@ public abstract class Postre {
         this.aderezos.remove(aderezo);
         
     }
+    
+    @Override
+    public String toString(){
+        return "sabor=" + getSabor() + ", precioParcial=" + getPrecioParcial() + ", aderezos=" + getAderezos() + '}';
+    }
 }

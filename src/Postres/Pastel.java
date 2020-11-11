@@ -20,7 +20,7 @@ public class Pastel extends Postre{
 
     @Override
     public String toString() {
-        return "Pastel{" + "sabor=" + super.getSabor() + ", precioParcial=" + super.getPrecioParcial() + ", aderezos=" + super.getAderezos() + '}';
+        return "Pastel{" + super.toString();
     }
  
 }

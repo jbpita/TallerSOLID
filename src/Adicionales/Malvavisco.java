@@ -12,14 +12,14 @@ package Adicionales;
 public class Malvavisco extends Aderezo  {
     
     public Malvavisco() {
-        super();
+        super("Malvavisco");
     }
     
 
     
     @Override
     public  void setNombre(String nombre){
-       super.setNombre("malvavisco");
+       super.setNombre(nombre);
     }
     
 }

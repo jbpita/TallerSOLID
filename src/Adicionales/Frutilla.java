@@ -12,12 +12,12 @@ package Adicionales;
 public class Frutilla extends Aderezo  {
     
     public Frutilla() {
-       super();
+       super("Frutilla");
     }
     
     @Override
     public  void setNombre(String nombre){
-       super.setNombre("frutilla");
+       super.setNombre(nombre);
     }
     
 }

@@ -24,10 +24,8 @@ public class Sistema {
         
         // Producir Helado
         Helado helado_vainilla = new Helado("Vainilla");
-        Crema c = new Crema();
-        c.setNombre("crema");    
+        Crema c = new Crema();    
         Frutilla f = new Frutilla();
-        f.setNombre("frutilla");
         helado_vainilla.añadirAderezo(c); //usamos los metodos de la clase padre para
         helado_vainilla.añadirAderezo(f);//eliminar y agregar aderezos
         System.out.println(helado_vainilla);
