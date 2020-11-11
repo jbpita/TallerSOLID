@@ -57,5 +57,12 @@ public abstract class Postre {
     public void setAderezos(ArrayList<Aderezo> aderezos) {
         this.aderezos = aderezos;
     }
-
+    public void añadirAderezo(Aderezo aderezo){
+        this.aderezos.add(aderezo);
+        
+    }
+    public void quitarAderezo(Aderezo aderezo){
+        this.aderezos.remove(aderezo);
+        
+    }
 }
