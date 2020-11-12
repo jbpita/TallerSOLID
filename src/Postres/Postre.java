@@ -49,7 +49,7 @@ public abstract class Postre {
     public void setAderezos(ArrayList<Aderezo> aderezos) {
         this.aderezos = aderezos;
     }
-    public void añadirAderezo(Aderezo aderezo){
+    public void addAderezo(Aderezo aderezo){
         this.aderezos.add(aderezo);
         
     }

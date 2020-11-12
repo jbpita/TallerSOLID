@@ -32,8 +32,8 @@ public class Sistema {
         arrPostres.add(pastel_chocolate);
         
         arrPostres.forEach(postre -> {
-            postre.añadirAderezo(new Crema());
-            postre.añadirAderezo(new Frutilla());
+            postre.addAderezo(new Crema());
+            postre.addAderezo(new Frutilla());
             System.out.println(postre);
             mnj_leche.cambiarTipoLeche(lechedesc,postre);
             System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
