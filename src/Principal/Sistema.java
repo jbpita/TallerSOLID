@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Principal;
+import java.util.ArrayList;
+
 import Adicionales.*;
 import Postres.*;
 import Procesos.*;
@@ -19,27 +21,24 @@ public class Sistema {
         // a ambos agregarles CREMA y FRUTILLAS
         // y cambiar el tipo de leche por Leche Descremada
         // Finalmente mostrar el precio final de cada uno
-        LecheEntera leche = new LecheDeslactosada();
+    	ArrayList<Postre> arrPostres = new ArrayList<>();
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
-        
-        // Producir Helado
-        Helado helado_vainilla = new Helado("Vainilla");
-        Crema c = new Crema();    
-        Frutilla f = new Frutilla();
-        helado_vainilla.aÃ±adirAderezo(c); //usamos los metodos de la clase padre para
-        helado_vainilla.aÃ±adirAderezo(f);//eliminar y agregar aderezos
-        System.out.println(helado_vainilla);
-//        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-        System.out.println(ManejadorDePrecio.showPrecioFinal(helado_vainilla));
-        
+        LecheDescremada lechedesc= new LecheDescremada();
+     // Producir Helado
+        Postre helado_vainilla = new Helado("Vainilla");
+        arrPostres.add(helado_vainilla);
         // Producir Pastel
-        Pastel pastel_chocolate = new Pastel("Chocolate");
-        pastel_chocolate.quitarAderezo(c);
-        pastel_chocolate.aÃ±adirAderezo(f);
-        System.out.println(pastel_chocolate);
-//        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        System.out.println(ManejadorDePrecio.showPrecioFinal(helado_vainilla));
+        Postre pastel_chocolate = new Pastel("Chocolate");
+        arrPostres.add(pastel_chocolate);
         
+        arrPostres.forEach(postre -> {
+            postre.añadirAderezo(new Crema());
+            postre.añadirAderezo(new Frutilla());
+            System.out.println(postre);
+            mnj_leche.cambiarTipoLeche(lechedesc,postre);
+            System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
+        });        
+
         
         
     }

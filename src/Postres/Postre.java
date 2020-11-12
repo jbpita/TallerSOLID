@@ -6,6 +6,8 @@
 package Postres;
 
 import Adicionales.Aderezo;
+import Leche.PuedeUsarLeche;
+
 import java.util.ArrayList;
 
 /**
@@ -47,7 +49,7 @@ public abstract class Postre {
     public void setAderezos(ArrayList<Aderezo> aderezos) {
         this.aderezos = aderezos;
     }
-    public void aÃ±adirAderezo(Aderezo aderezo){
+    public void añadirAderezo(Aderezo aderezo){
         this.aderezos.add(aderezo);
         
     }
